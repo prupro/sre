@@ -1,89 +1,34 @@
+%===============================================================================
+% $Id: ifacconf.tex 19 2011-10-27 09:32:13Z jpuente $  
+% Template for IFAC meeting papers
+% Copyright (c) 2007-2008 International Federation of Automatic Control
+%===============================================================================
+\documentclass{absconf}
 
-\documentclass[a4paper]{article} %
-\usepackage{graphicx,amssymb} %
-
-\textwidth=15cm \hoffset=-1.2cm %
-\textheight=25cm \voffset=-2cm %
-
-\pagestyle{empty} %
-
-\date{} %
-
-\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
-
-\def\titulo#1{\title{#1}} %
-\def\autores#1{\author{#1}} %
-
-% Please, do not change any of the above lines
-
-
-
-
-
-
-
-
+\usepackage{graphicx}      % include this line if your document contains figures
+\usepackage{natbib}        % required for bibliography
+%===============================================================================
 \begin{document}
+\begin{frontmatter}
 
-% Type down your paper title
-\titulo{Sample \LaTeX\ abstract for ACA 2013 Proceedings}
+\title{Style for IFAC Conferences \& Symposia: Use Title Case for
+Paper Title}
+% Title, preferably not more than 10 words.
 
-% Authors
-\autores{Gabriel Aguilera, Jos\'e Luis Gal\'an, Pedro Rodr\'{\i}guez \\ %
-       University of M\'alaga (Spain) \\ \\ % Affiliation 1
-       Gilles Picard \\ % If any other author with different Affilation
-       University of Montreal (Canada) \\ \\ % Affiliation 2 (if needed)
-       % New author \\
-       % New affiliation \\
-       % Add authors and affiliation as needed
-       \tt{aca2013@ctima.uma.es} % Only one corresponding e-mail
-       }%
-
-
-\maketitle
-
-\thispagestyle{empty}
-
-
-
-% The abstract
-
-\begin{abstract}
-This is a sample abstract for submitting a talk proposal for any special session at ACA 2013. You
-should send the tex file and a pdf version of your proposal.
-
-Please, follow the specific submitting instructions for sending your proposal but do not forget to
-send the tex and pdf versions.
-
-You can check the list of accepted Special Session and any other information about the Conference
-at {\tt http://aca2013.uma.es/}
-
-Once your abstract is accepted, you can send to the Session chair(s) of the corresponding Special
-Session an extended version (short paper up to 5 pages) in order to be included in the Proceedings
-(with ISBN).
-
-In case you want to send an extended version for Proceedings, you should follow the standard {\tt
-section} and {\tt subsection} structure. The extended version should start with an introduction
-section and Bibliography should be the last part. Please, remember that extended version should not
-be longer than 5 compiled pages.
-
-In case you do not want to send an extended version, only a one/two page(s) abstract will be
-published in the Proceedings.
-
+\author{Prudhvi Porandla, Prof. Prasanna Chaporkar} 
+\address{ Electrical Engineering, IIT Bombay   }
+\begin{abstract}                % Abstract of not more than 250 words.
+	These instructions give you guidelines for preparing papers for IFAC
+technical meetings. Please use this document as a template to prepare
+your manuscript. For submission guidelines, follow instructions on
+paper submission system as well as the event website.
+Thishiof
 \end{abstract}
 
-\keywords{Sample document, ACA 2013, Abstract submission, Paper submission} % Write down at least 3 Keywords
+\begin{keyword}
+Five to ten keywords, preferably chosen from the IFAC keyword list.
+\end{keyword}
 
-
-
-
-
-
-% \section{Introduction}
-
-
-
-
-
-
+\end{frontmatter}
+%===============================================================================
 \end{document}
