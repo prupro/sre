@@ -5,24 +5,40 @@
 %===============================================================================
 \documentclass{absconf}
 
-\usepackage{graphicx}      % include this line if your document contains figures
+%\usepackage{graphicx}      % include this line if your document contains figures
 \usepackage{natbib}        % required for bibliography
+%\usepackage{libertine}
 %===============================================================================
-\begin{document}
-\begin{frontmatter}
+\begin{document} \begin{frontmatter}
 
-\title{Source Power Allocation and Relay Selection in Amplify-and-Forward Relaying}
-% Title, preferably not more than 10 words.
+	\title{Power Allocation and Relay Selection in Amplify-and-Forward
+	Relaying}
+	% Title, preferably not more than 10 words.
 
-\author{Prudhvi Porandla, Prof. Prasanna Chaporkar} 
-\address{ Electrical Engineering, IIT Bombay   }
-	\vspace{12pt}
-\begin{abstract}                % Abstract of not more than 250 words.
-	\mbox{} \\ 
-	
-\end{abstract}
+	\author{Prudhvi Porandla, Prof. Prasanna Chaporkar} \address{ Electrical
+	Engineering, IIT Bombay   } 
+	\vspace{12pt} 
+	\begin{abstract}
+		 \mbox{} \\ 
+		 Multihop
+		communication is considered to be a standard in next generation
+		cellular networks.  There are several relaying schemes,
+		Decode-and-forward(DF) and Amplify-and-Forward(AF) being the popular
+		ones. In DF scheme, the relay decodes the message from the source,
+		re-encodes and transmits it to the destination node whereas in AF
+		the relay amplifies the received signal and transmits to the
+		destination node. Relay selection and optimal power allocation are
+		the two important aspects in either scheme. In this work, we look at
+		these two problems in 2-hop communication network in which relays
+		employ AF scheme. To make the power allocation problem well-defined
+		we prove that rate/capacity is a concave function of both source and
+		relay powers. Once concavity is established, we can find the optimal
+		relay and source powers. However, when there are multiple relays the power allocation might interfere with relay selection. We show that this is indeed the case and discuss the conditions under which a relay switch over can take place.  
 
-\begin{keyword}
+	\end{abstract}
+
+\begin{keyword} 
+	Amplify-and-Forward, relay selection, power control, cooperative communication
 \end{keyword}
 
 \end{frontmatter}
