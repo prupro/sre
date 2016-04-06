@@ -1,0 +1,49 @@
+\documentclass[titlepage]{article}
+
+\usepackage{amsmath}  % For math
+\usepackage{amssymb}  % For more math
+\usepackage{libertine}
+
+
+\begin{document}
+
+\begin{equation}
+R = \frac{1}{2} w log(1+\frac{P_s g_{sd}}{\sigma^2} +
+\frac{P_s g_{sr} P_r g_{rd}}{\sigma^2(\sigma^2 + P_sg_{sr} + P_rg_{rd})})
+\end{equation}
+
+Assume there are two relays and let $a_1 = \frac{g_{sr_1}}{\sigma^2}$
+and $b_1 = \frac{P_{r} g_{r_1 d}}{\sigma^2}$ similarily $a_2, b_2$ for relay 2.
+At a particular source power $P_s$, relay 1 is chosen over relay 2
+if $\frac{a_1b_1}{1+P_s a_1 + b_1} > \frac{a_2b_2}{1+P_s a_2 + b_2}
+ $
+\\
+Consider the function $f(p) = \frac{pab}{1+p a + b} $ \\
+\begin{equation}
+f'(p) = \frac{(1+b)ab}{(1+pa+b)^2}
+\end{equation}
+$f'(p)$ is positive and decreasing with $p$. \\
+The power at which both the relays give same rate can be obtained 
+by equating $f_1(p)$ and $f_2(p)$.
+
+\begin{equation}
+	P_0 = (1+b_1)(1+b_2) \frac{\frac{a_1b_1}{1+b_1} - 
+	\frac{a_2b_2}{1+b_2}}{a_1a_2(b_2-b_1)}
+\end{equation}
+
+For $P_0$ to be positive, both numerator and denominator should 
+have same sign i.e., if 
+$\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ then $b_2 > b_1$.
+	To explain this intuitively, let us assume $b_0,b_2$ to be 
+	much larger than 1 which reduces the first inequialitely ti
+	$a_1 > a_2$. What this means is, source to relay cahennel is 
+	better for relay 1 but relay to destination channel is stronger
+	for relay 2. Hence at low source powers relay 1 might givr
+	better SNR but if we increase source power past $P_0$ relay 2 
+	gives more rate than relay 1. Same arguments can be made 
+	for the case where inequalities are in the opposite
+	direction. 
+	\\
+	For $P_0 < 0$, one of the rel;ays is the desired one irrespec
+	tve of source pwer.
+\end{document}
