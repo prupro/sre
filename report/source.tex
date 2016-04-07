@@ -6,9 +6,33 @@
 
 
 \begin{document}
+\textbf{Amplify-and-Forward} \\
+The transmission has two slots. In th first, source node broadcasts the signal to
+relay and destinatio and in the senconf the realy amplifies the received signal 
+and retransmits it to the destination node. \\
+\textit{First Slot:}
+\begin{equation}
+	Y_{sd} = \sqrt{P_s G_{sd}} X_s + n_{sd} \\
+	Y_{sr} = \sqrt{P_s G_{sr}} X_s + n_{sr} \\
+\end{equation}
+\textit{Second Slot:}
+\begin{equation}
+	Y_{rd} = \sqrt{P_r G_{rd}} X_{rd} + n_{rd} \\
+	X_{rd} = \frac{Y_{sr}}{|Y_{sr}|} \\
+\end{equation}
 
 \begin{equation}
-R = \frac{1}{2} w log(1+\frac{P_s g_{sd}}{\sigma^2} +
+	Y_{rd} = \frac{\sqrt{P_r G_{rd} P_s G_{sr}}}{\sqrt{P_s G_{rd} + \sigma^2}}X_s + \frac{\sqrt{P_rG_{rd}}}{\sqrt{P_s G_{rd} + \sigma^2}} n_{sr} + n_{rd} 
+\end{equation}
+
+\textit{Rate expression:}
+\begin{equation}
+	R = \frac{1}{2} w log_2(1+\Gamma_{sd}+\Gamma_{srd}) \quad where \Gamma 
+	represents SNR
+\end{equation}
+
+\begin{equation}
+R = \frac{1}{2} w log_2(1+\frac{P_s g_{sd}}{\sigma^2} +
 \frac{P_s g_{sr} P_r g_{rd}}{\sigma^2(\sigma^2 + P_sg_{sr} + P_rg_{rd})})
 \end{equation}
 
