@@ -11,5 +11,10 @@ Report submission must include:
 - interdependence of source power and relay selection
 - more details on above with two relays
 - final algorithm
+- future work; a little about simulation
 - conclusions
 - bibliography
+
+
+todo
+- change abstract
