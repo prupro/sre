@@ -18,3 +18,6 @@ Report submission must include:
 
 todo
 - change abstract
+- add fig 1 and its ref
+- ref to eq 2 and eq 1
+- G to g in rate exp.
