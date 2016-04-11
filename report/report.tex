@@ -352,10 +352,10 @@ node. In amplify-and-forward(AF) relaying scheme, the total transmission period 
 divided in to two slots.
 In the first slot, source node broadcasts the message to relay and destination nodes
 and in the second the relay amplifies the received signal and retransmits it to 
-the destination node. This is illustrated in Fig 1.
+the destination node. This is illustrated in fig~\ref{twoSlots}.
 \begin{figure}[!t] 
 	\centering 
-	\includegraphics[width=2.5in]{img/twoslots.png} 
+	\includegraphics[width=2.5in]{img/sysmodel} 
 	\caption{Two slots in AF}
 	\label{twoSlots} 
 \end{figure}
@@ -363,31 +363,37 @@ the destination node. This is illustrated in Fig 1.
 The signals received at relay and destination nodes in the two slots are as 
 follows:\\
 \textit{First Slot:}
+\begin{align} \label{ysd}
+	Y_{sd} &= \sqrt{P_s G_{sd}} X_s + n_{sd}
+\end{align}
 \begin{align*}
-	Y_{sd} &= \sqrt{P_s G_{sd}} X_s + n_{sd} \\
 	Y_{sr} &= \sqrt{P_s G_{sr}} X_s + n_{sr} \\
 \end{align*}
 \textit{Second Slot:}
-\begin{equation}
+\begin{equation}\label{yrd}
 	Y_{rd} = \sqrt{P_r G_{rd}} X_{rd} + n_{rd} 
 \end{equation}
-\begin{equation}
-	Y_{rd} = \frac{\sqrt{P_r G_{rd} P_s G_{sr}}}{\sqrt{P_s G_{rd} + \sigma^2}}X_s + \frac{\sqrt{P_rG_{rd}}}{\sqrt{P_s G_{rd} + \sigma^2}} n_{sr} + n_{rd} 
+\begin{equation} \label{finalyrd}
+	Y_{rd} = \frac{\sqrt{\mathstrut P_r G_{rd} P_s G_{sr}}}{\sqrt{\mathstrut 
+	P_s G_{sr} + \sigma^2}}X_s + \frac{\sqrt{\mathstrut P_rG_{rd}}}{\sqrt{\mathstrut 
+	P_s G_{sr} + \sigma^2}} n_{sr} + n_{rd} 
 \end{equation}
-The final expression for $Y_{rd}$(eq. 2) is obtained by substituting
-$X_{rd} = \frac{Y_{sr}}{|Y_{sr}|}$ in eq. 1. All symbols have usual 
-meanings; $s$ denotes source, $P$ denotes power etc
-\\ \\ 
+The final expression for $Y_{rd}$ is obtained by substituting
+$X_{rd} = \frac{Y_{sr}}{|Y_{sr}|}$ in eq.~\ref{yrd}. All symbols have usual
+meanings - $s$ denotes source, $P$ denotes power, $G_{sd}\big(=\frac{g_{sd}}{\mathstrut
+d^2_{sd}}\big)$ is the channel gain from source to destination, etc.
 \subsection{Rate}
 The rate/capacity of AF relaying scheme is given by
 \begin{align*}
-	R = \frac{1}{2} w \log_2(1+\Gamma_{sd}+\Gamma_{srd}) 
+	R = \frac{1}{2} w \log_2(1+\Gamma_{sd}+\Gamma_{rd}) 
 	\\ \text{where $\Gamma$
 represents SNR}
 \end{align*}
+Substituting $\Gamma_{sd}$ and $\Gamma_{rd}$, obtained from equations \ref{ysd}
+and \ref{finalyrd} respectively, in the above expression we get
 \begin{align*}
-	R &= \frac{1}{2} w \log_2\bigg(1+\frac{P_s g_{sd}}{\sigma^2} +
-	\frac{P_s g_{sr} P_r g_{rd}}{\sigma^2(\sigma^2 + P_sg_{sr} + P_rg_{rd})}\bigg)
+	R &= \frac{1}{2} w \log_2\bigg(1+\frac{P_s G_{sd}}{\sigma^2} +
+	\frac{P_s G_{sr} P_r G_{rd}}{\sigma^2(\sigma^2 + P_sG_{sr} + P_rG_{rd})}\bigg)
 \end{align*}
 
 \section{Source power and Relay selection}
