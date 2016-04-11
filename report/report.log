@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.2.25)  11 APR 2016 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.2.25)  12 APR 2016 02:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -280,12 +280,36 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<img/sysmodel.pdf, id=1, 554.66205pt x 443.63458pt>
-File: img/sysmodel.pdf Graphic file (type pdf)
- <use img/sysmodel.pdf>
-Package pdftex.def Info: img/sysmodel.pdf used on input line 358.
-(pdftex.def)             Requested size: 180.67499pt x 144.50446pt.
+Package epstopdf Info: Source file: <img/sysmodel.eps>
+(epstopdf)                    date: 2016-04-11 12:47:29
+(epstopdf)                    size: 526877 bytes
+(epstopdf)             Output file: <img/sysmodel-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-04-11 13:44:38
+(epstopdf)                    size: 44675 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/sysmodel-eps-converted
+-to.pdf img/sysmodel.eps>
+(epstopdf)             \includegraphics on input line 347.
+Package epstopdf Info: Output file is already uptodate.
 
+<img/sysmodel-eps-converted-to.pdf, id=1, 555.07375pt x 444.66125pt>
+File: img/sysmodel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use img/sysmodel-eps-converted-to.pdf>
+Package pdftex.def Info: img/sysmodel-eps-converted-to.pdf used on input line 3
+47.
+(pdftex.def)             Requested size: 180.67499pt x 144.73709pt.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 391.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 391.
+ [1{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./img/sysmodel-eps-converted-to.pdf>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -297,35 +321,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}
-
-
- <./img/sysmodel.pdf>] (./report.aux) ) 
+[2] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  2931 strings out of 495025
- 44850 string characters out of 6181515
+ 45046 string characters out of 6181515
  112106 words of memory out of 5000000
- 6122 multiletter control sequences out of 15000+600000
- 39632 words of font info for 76 fonts, out of 8000000 for 9000
+ 6128 multiletter control sequences out of 15000+600000
+ 34597 words of font info for 65 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  38i,13n,23p,232b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc
-/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (1 page, 784369 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (2 pages, 178628 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

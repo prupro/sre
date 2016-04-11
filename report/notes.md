@@ -7,14 +7,15 @@ Report submission must include:
 
 - intro to relaying; about next gen standards
 - various relaying schemes DF, AF
-- AF scheme; two slots diagram; rate expression 
-- interdependence of source power and relay selection
-- more details on above with two relays
-- final algorithm
+~~- AF scheme; two slots diagram; rate expression ~~
+~~- interdependence of source power and relay selection~~
+~~- more details on above with two relays~~
+~~- final algorithm~~
 - future work; a little about simulation
-- conclusions
+~~- conclusions~~
 - bibliography
 
 
 todo
-- change abstract
+- intro
+- future work

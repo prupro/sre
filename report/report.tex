@@ -224,15 +224,12 @@ Indian Institute of Technology Bombay\\
 	Multihop communication is considered to be a standard in next generation
 	cellular networks.  There are several relaying schemes,
 	Decode-and-forward(DF) and Amplify-and-Forward(AF) being the popular ones.
-	In DF scheme, the relay decodes the message from the source, re- encodes
+	In DF scheme, the relay decodes the message from the source, re-encodes
 	and transmits it to the destination node whereas in AF the relay amplifies
 	the received signal and transmits to the destination node. Relay selection
-	and optimal power allocation are the two important aspects in either
-	scheme. In this work, we look at these two problems in 2- hop communication
-	network in which relays employ AF scheme. To make the power allocation
-	problem well-defined we prove that rate/capacity is a concave function of
-	both source and relay powers. Once concavity is established, we can find
-	the optimal relay and source powers. However, when there are multiple
+	and optimal power allocation are two important aspects in either
+	scheme. In this work, we look at these two problems in 2-hop communication
+	network in which relays employ AF scheme. However, when there are multiple
 	relays the power allocation might interfere with relay selection. We show
 	that this is indeed the case and discuss the conditions under which a relay
 	switch over can take place.
@@ -256,15 +253,7 @@ Indian Institute of Technology Bombay\\
 
 \section{Introduction}
 % no \IEEEPARstart
-This demo file is intended to serve as a ``starter file'' for IEEE conference
-papers produced under \LaTeX\ using IEEEtran.cls version 1.8b and later.
-% You must have at least 2 lines in the paragraph with the drop letter (should
-% never be an issue)
-I wish you the best of success.
 
-\hfill mds
-
-\hfill August 26, 2015
 
 \subsection{Subsection Heading Here} Subsection text here.
 
@@ -355,7 +344,7 @@ and in the second the relay amplifies the received signal and retransmits it to
 the destination node. This is illustrated in fig~\ref{twoSlots}.
 \begin{figure}[!t] 
 	\centering 
-	\includegraphics[width=2.5in]{img/sysmodel} 
+	\includegraphics[width=2.5in]{img/sysmodel.eps} 
 	\caption{Two slots in AF}
 	\label{twoSlots} 
 \end{figure}
@@ -380,8 +369,8 @@ follows:\\
 \end{equation}
 The final expression for $Y_{rd}$ is obtained by substituting
 $X_{rd} = \frac{Y_{sr}}{|Y_{sr}|}$ in eq.~\ref{yrd}. All symbols have usual
-meanings - $s$ denotes source, $P$ denotes power, $G_{sd}\big(=\frac{g_{sd}}{\mathstrut
-d^2_{sd}}\big)$ is the channel gain from source to destination, etc.
+meanings - $s$ denotes source, $P$ denotes power, $G_{sd}\big(=\dfrac{g_{sd}}
+{d^2_{sd}}\big)$ is the channel gain from source to destination, etc.
 \subsection{Rate}
 The rate/capacity of AF relaying scheme is given by
 \begin{align*}
@@ -397,8 +386,75 @@ and \ref{finalyrd} respectively, in the above expression we get
 \end{align*}
 
 \section{Source power and Relay selection}
+When there are multiple relays we have to select one of them for transmission. 
+There are various relay selection techniques one of which is Max-Min selection-
+relay $i$ which maximizes min\{$G_{sr_i},G_{r_id}$\} is selected -  and a 
+continuous version of this scheme which uses harmonic mean of $G_{sr_i},G_{r_id}$
+instead of \textit{min}. However, these are not optimal schemes in the sense that
+the resulting relay may not give the highest possible rate. An optimal scheme
+will select a relay which gives maximum rate i.e., relay $k$ is selected
+where 
+\begin{equation}
+	k = \arg \max\limits_{i} \Gamma_{r_id}
+\end{equation}
+Since $\Gamma_{sd}$ is same for all relays, this scheme selects the optimal
+relay. 
+\par
+Now that we've selected a relay for transmission the next step is 
+to optimise the source power $P_s$. But changing $P_s$ changes $\Gamma_{rd}$ as
+well therefore it may so happen that different relays are optimal at different
+source powers. To see if this scenario is possible, consider two
+relays $R_1$ and $R_2$ and assume both use same constant power $P_r$.
+$\Gamma_{rd}$ can be rewritten as
+\begin{equation}
+	\Gamma(P_s) = \frac{P_s ab}{1+P_s a + b} 
+\end{equation}
+where $a = \frac{G_{sr}}{\sigma^2}$ and $b = \frac{P_{r} G_{r d}}{\sigma^2}$
+Now the question can be reframed as: if at some power $P_1$, $R_1$ is a better
+relay than $R_2$ i.e.,$\Gamma_1(P_1) > \Gamma_2(P_1)$ , then can $R_2$ be 
+a better relay than $R_1$ for some other power $P_2$. To answer this 
+let us find the power at which both relays are equally good.
+\begin{align*}
+	\Gamma_1(P_0) = \Gamma_2(P_0)
+\end{align*}
+Solving the above equation, we get
+\begin{equation}
+	P_0 = (1+b_1)(1+b_2) \frac{\frac{a_1b_1}{1+b_1} - 
+	\frac{a_2b_2}{1+b_2}}{a_1a_2(b_2-b_1)}
+\end{equation}
+For $P_0$ to be positive, both numerator and denominator should 
+have same sign i.e., if 
+$\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ then $b_2 > b_1$.
+To explain this intuitively, let us assume $b_0,b_2$ to be 
+much larger than 1 which reduces the first inequality to
+$a_1 > a_2$. What this means is, source to relay channel is 
+better for $R_1$ but relay to destination channel is stronger
+for $R_2$. Hence at low source powers $R_2$ gives
+better SNR but if we increase source power beyond  $P_0$, $R_2$ 
+is a better relay than $R_1$. Same argument can be made 
+for the case where inequalities are in the opposite
+direction. 
+\\
+For $P_0 < 0$, one of the relays is the desired one irrespective of source power.
+\\
+Finally the algorithm to use when there are two relays is:
+\begin{itemize}
+	\item Assume some initial source power and select the best relay at that power and optimise the source power
+	\item If the inequalities mentioned above are not satisfied then the 
+		problem is solved - we have selected the best relay and we have optimised the power
+	\item Otherwise, check if the current relay is still the best relay. If it is 
+		not, then use the other relay and optimise the power
+\end{itemize}
 \section{Future Work}
-\section{Conclusion} The conclusion goes here.
+The first question that needs to be answered is whether or not the above
+algorithm converges.
+In this work we assumed that all relays are transmitting at same constant power,
+
+\section{Conclusion}
+In this work, we have shown that relay selection and source power control problems
+are not independant and explained briefly under what conditions they are independent.
+We also proposed an algorithm that can be used to find the best relay and the
+optimised source power when there are multiple relays. 
 
 
 
@@ -428,9 +484,9 @@ and \ref{finalyrd} respectively, in the above expression we get
 % labels box)
 \begin{thebibliography}{1}
 
-	\bibitem{IEEEhowto:kopka} H.~Kopka and P.~W. Daly, \emph{A Guide to
-		\LaTeX}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Harlow,
-		England: Addison-Wesley, 1999.
+	\bibitem{} Chandradeep Singh, Prasanna Chaporkar, and S. N.
+		Merchant, \emph{Optimal Power Allocation at Mobile Node for Amplify
+		Forward Relay Transmission}
 
 \end{thebibliography}
 
