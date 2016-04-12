@@ -229,10 +229,9 @@ Indian Institute of Technology Bombay\\
 	the received signal and transmits to the destination node. Relay selection
 	and optimal power allocation are two important aspects in either
 	scheme. In this work, we look at these two problems in 2-hop communication
-	network in which relays employ AF scheme. However, when there are multiple
-	relays the power allocation might interfere with relay selection. We show
-	that this is indeed the case and discuss the conditions under which a relay
-	switch over can take place.
+	network in which relays employ AF scheme and show that power allocation and
+	relay selection are interdependant and give conditions on channel conditions
+	under which relays may be chosen irrespective of source power.
 
 \end{abstract}
 
@@ -263,7 +262,7 @@ a transmitting user there will be many idle user equipments which can
  be used as relays. That means the standard should allow users to 
 send signals directly to nearby users without going through base station.
 There are many challenges that need to be solved to be able to do
-this correctly considering that virtually every user thinks this is 
+this correctly considering that virtually every user thinks this 
 risks their privacy. New incentive mechanisms need to be developed 
 to compensate the relaying users for the extra power spent. Apart from
 security and billing issues, there are also some engineering challenges
@@ -272,18 +271,19 @@ etc. \\
 Two popular relaying schemes are Decode-and-Forward and Amplify-and-Forward.
 In partial decode-and-forward scheme, the whole message is split in to a private
 part and a public part. In the first slot, the source node broadcasts the public
-part to relay node and destination node. The relay decodes the message and reencodes
+part to relay node and destination node. The relay decodes the message and re-encodes
 it using an independent codebook and transmits to destination in the second slot.
 The source transmits the private part in second slot. The destination node 
 receives public part from source in the first slot and in second slot it
 receives re-encoded public part from relay node and private part from source node.
 This scheme imposes severe restrictions on timing and synchronization at 
 different stages of transmission. This is one of the reasons why amplify-and-forward
-scheme is considered more viable although rate gain is higher in DF scheme. \\
+scheme is considered more viable although rate is usually higher in DF scheme. \\
 In previous works, many relay selection schemes have been proposed but most 
 of them are not based on SNR. For such schemes source power does not affect 
 relay selection. In an SNR based relay selection policy, source
-power and relay power affects relay selection. 
+power and relay power allocations affect relay selection while intrinsically
+depending on which relay is being used. 
  However, this may not always be the case; 
 under some channel conditions power allocation does not affect relay selection.
 In this work, we assume relay power is constant and provide an intuitive
@@ -384,8 +384,7 @@ Since $\Gamma_{sd}$ is same for all relays, this scheme selects the optimal
 relay. 
 \par
 Now that we've selected a relay for transmission the next step is 
-to optimise the source power $P_s$. But changing $P_s$ changes $\Gamma_{rd}$ as
-well therefore it may so happen that different relays are optimal at different
+to optimise the source power $P_s$. But changing $P_s$ changes $\Gamma_{rd}$ therefore it may so happen that different relays are optimal at different
 source powers. To see if this scenario is possible, consider two
 relays $R_1$ and $R_2$ and assume both use same constant power $P_r$.
 $\Gamma_{rd}$ can be rewritten as
@@ -408,11 +407,11 @@ Solving the above equation, we get
 For $P_0$ to be positive, both numerator and denominator should 
 have same sign i.e., if 
 $\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ then $b_2 > b_1$.
-To explain this intuitively, let us assume $b_0,b_2$ to be 
+To explain this intuitively, let us assume $b_1,b_2$ to be 
 much larger than 1 which reduces the first inequality to
 $a_1 > a_2$. What this means is, source to relay channel is 
 better for $R_1$ but relay to destination channel is stronger
-for $R_2$. Hence at low source powers $R_2$ gives
+for $R_2$. Hence at low source powers $R_1$ gives
 better SNR but for  source power greater than  $P_0$, $R_2$ 
 is a better relay than $R_1$. Same argument can be made 
 for the case where inequalities are in the opposite
