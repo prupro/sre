@@ -5,17 +5,18 @@ Report submission must include:
 	4.  Conclusions
 	5.  Bibliography
 
-- intro to relaying; about next gen standards
-- various relaying schemes DF, AF
+~~- intro to relaying; about next gen standards~~
+~~- various relaying schemes DF, AF~~
 ~~- AF scheme; two slots diagram; rate expression ~~
 ~~- interdependence of source power and relay selection~~
 ~~- more details on above with two relays~~
 ~~- final algorithm~~
-- future work; a little about simulation
+~~- future work; a little about simulation~~
 ~~- conclusions~~
-- bibliography
+~~- bibliography~~
 
 
 todo
-- intro
-- future work
+~~- intro~~
+~~- future work~~
+~~- add some in third section~~

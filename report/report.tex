@@ -253,64 +253,57 @@ Indian Institute of Technology Bombay\\
 
 \section{Introduction}
 % no \IEEEPARstart
+Cooperative communication is an efficient way to use network 
+resources to increase rate and coverage in cellular networks.
+Currently, network provider places the relay in an optimum
+position so that the relay to base station link is always good. 
+In next generation cellular networks, user-assisted relaying is being 
+considered a standard. The idea is based on the fact that around
+a transmitting user there will be many idle user equipments which can 
+ be used as relays. That means the standard should allow users to 
+send signals directly to nearby users without going through base station.
+There are many challenges that need to be solved to be able to do
+this correctly considering that virtually every user thinks this is 
+risks their privacy. New incentive mechanisms need to be developed 
+to compensate the relaying users for the extra power spent. Apart from
+security and billing issues, there are also some engineering challenges
+like optimising power at both relay and source nodes, selecting the best relay 
+etc. \\ 
+Two popular relaying schemes are Decode-and-Forward and Amplify-and-Forward.
+In partial decode-and-forward scheme, the whole message is split in to a private
+part and a public part. In the first slot, the source node broadcasts the public
+part to relay node and destination node. The relay decodes the message and reencodes
+it using an independent codebook and transmits to destination in the second slot.
+The source transmits the private part in second slot. The destination node 
+receives public part from source in the first slot and in second slot it
+receives re-encoded public part from relay node and private part from source node.
+This scheme imposes severe restrictions on timing and synchronization at 
+different stages of transmission. This is one of the reasons why amplify-and-forward
+scheme is considered more viable although rate gain is higher in DF scheme. \\
+In previous works, many relay selection schemes have been proposed but most 
+of them are not based on SNR. For such schemes source power does not affect 
+relay selection. In an SNR based relay selection policy, source
+power and relay power affects relay selection. 
+ However, this may not always be the case; 
+under some channel conditions power allocation does not affect relay selection.
+In this work, we assume relay power is constant and provide an intuitive
+understanding of the conditions
+under which a relay switch over can take place and under what conditions
+the relay selection problem and power allocation problem are independent.
 
 
-\subsection{Subsection Heading Here} Subsection text here.
 
-
-\subsubsection{Subsubsection Heading Here} Subsubsection text here.
-
-
-% An example of a floating figure using the graphicx package.  Note that \label
-% must occur AFTER (or within) \caption.  For figures, \caption should occur
-% after the \includegraphics.  Note that IEEEtran v1.7 and later has special
-% internal code that is designed to preserve the operation of \label within
-% \caption even when the captionsoff option is in effect. However, because of
-% issues like this, it may be the safest practice to put all your \label just
-% after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class option
-% should be used if it is desired that the figures are to be displayed while in
-% draft mode.
-%
 %\begin{figure}[!t] \centering \includegraphics[width=2.5in]{myfigure} where an
 %.eps filename suffix will be assumed under latex, and a .pdf suffix will be
 %assumed for pdflatex; or what has been declared via
 %\DeclareGraphicsExtensions.  \caption{Simulation results for the network.}
 %\label{fig_sim} \end{figure}
 
-% Note that the IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.  (The
-% subfig.sty package must be loaded for this to work.) The subfigure \label
-% commands are set within each subfloat command, and the \label for the overall
-% figure must come after \caption.  \hfil is used as a separator to get equal
-% spacing.  Watch out that the combined width of all the subfigures on a line
-% do not exceed the text width or a line break will occur.
-%
 %\begin{figure*}[!t] \centering \subfloat[Case
 %I]{\includegraphics[width=2.5in]{box}% \label{fig_first_case}} \hfil
 %\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
 %\label{fig_second_case}} \caption{Simulation results for the network.}
 %\label{fig_sim} \end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure captions
-% (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.  Be
-% aware that for subfig.sty to generate the (a), (b), etc., subfigure labels,
-% the optional argument to \subfloat must be present. If a subcaption is not
-% desired, just leave its contents blank, e.g., \subfloat[].
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table and, given that table captions
-% serve much like titles, are usually capitalized except for words such as a,
-% an, and, as, at, but, by, for, in, nor, of, on, or, the, to and up, which are
-% usually not capitalized unless they are the first or last word of the
-% caption. Table text will default to \footnotesize as the IEEE normally uses
-% this smaller font for tables.  The \label must come after \caption as always.
 %
 %\begin{table}[!t]
 %% increase table row spacing, adjust to taste
@@ -322,16 +315,6 @@ Indian Institute of Technology Bombay\\
 %% than the plain LaTeX2e tabular which is used here.
 %\begin{tabular}{|c||c|} \hline One & Two\\ \hline Three & Four\\ \hline
 %\end{tabular} \end{table}
-
-
-% Note that the IEEE does not put floats in the very first column
-% - or typically anywhere on the first page for that matter. Also,
-% in-text middle ("here") positioning is typically not used, but it is allowed
-% and encouraged for Computer Society conferences (but not Computer Society
-% journals). Most IEEE journals/conferences use top floats exclusively.  Note
-% that, LaTeX2e, unlike IEEE journals/conferences, places footnotes above
-% bottom floats. This can be corrected via the \fnbelowfloat command of the
-% stfloats package.
 
 
 
@@ -430,31 +413,48 @@ much larger than 1 which reduces the first inequality to
 $a_1 > a_2$. What this means is, source to relay channel is 
 better for $R_1$ but relay to destination channel is stronger
 for $R_2$. Hence at low source powers $R_2$ gives
-better SNR but if we increase source power beyond  $P_0$, $R_2$ 
+better SNR but for  source power greater than  $P_0$, $R_2$ 
 is a better relay than $R_1$. Same argument can be made 
 for the case where inequalities are in the opposite
 direction. 
 \\
 For $P_0 < 0$, one of the relays is the desired one irrespective of source power.
 \\
+To summarise, here are the conditions under which one relay is better than the other:
+\begin{itemize}
+	\item $\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ and $b_2 > b_1$ \\
+		$R_1$ at source power less than  $P_0$ and $R_2$ at power greater than $P_0$
+	\item $\frac{a_1b_1}{1+b_1} < \frac{a_2b_2}{1+b_2}$ and $b_2 < b_1$ \\
+		$R_2$ at source power $<P_0$ and $R_1$ at power $>P_0$
+	\item $\frac{a_1b_1}{1+b_1} < \frac{a_2b_2}{1+b_2}$ and $b_2 > b_1$ \\
+		$R_2$ is a better relay for all source powers
+	\item $\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ and $b_2 < b_1$ \\
+		$R_1$ is a better relay for all source powers
+\end{itemize}
 Finally the algorithm to use when there are two relays is:
 \begin{itemize}
 	\item Assume some initial source power and select the best relay at that power and optimise the source power
-	\item If the inequalities mentioned above are not satisfied then the 
-		problem is solved - we have selected the best relay and we have optimised the power
-	\item Otherwise, check if the current relay is still the best relay. If it is 
-		not, then use the other relay and optimise the power
+	\item Check if the current relay is still the best relay at this source power. If it is	not, use the other relay and optimise the power
 \end{itemize}
 \section{Future Work}
-The first question that needs to be answered is whether or not the above
-algorithm converges.
-In this work we assumed that all relays are transmitting at same constant power,
+\begin{itemize}
+	\item Proving convergence of the above algorithm and finding out whether the
+		initial assumed source power has any affect on the convergence.
+	\item When the number of relays increases, this becomes more complex. A good 
+		way to overcome this is by finding a centralized way to optimise 
+		source power and selecting a relay i.e., given the channel gains of all relay
+		links, the source node should be able to find the transmission power and 
+		the relay.
+	\item Although source power optimisation outperforms relay power optimisation
+		it is still important to consider the case when relay power is varying
+		particularily when the relays are user equipments.
 
+\end{itemize}
 \section{Conclusion}
 In this work, we have shown that relay selection and source power control problems
 are not independant and explained briefly under what conditions they are independent.
-We also proposed an algorithm that can be used to find the best relay and the
-optimised source power when there are multiple relays. 
+We also proposed an algorithm that can be used to find the best relay while 
+optimising source power when there are multiple relays. 
 
 
 
@@ -487,7 +487,9 @@ optimised source power when there are multiple relays.
 	\bibitem{} Chandradeep Singh, Prasanna Chaporkar, and S. N.
 		Merchant, \emph{Optimal Power Allocation at Mobile Node for Amplify
 		Forward Relay Transmission}
-
+	\bibitem{} Aggelos Bletsas, Ashish Khisti, David P. Reed, and 
+		Andrew Lippman, \emph{A Simple Cooperative Diversity Method Based
+		on Network Path Selection}
 \end{thebibliography}
 
 
