@@ -100,15 +100,15 @@ Guide: Prof. Prasanna Chaporkar}
 
 \begin{frame}{Overview}
   \begin{itemize}
-  \item Introduction
-  \vspace{3mm}
+%  \item Introduction
+%  \vspace{3mm}
   \item Relaying Schemes 
   \vspace{3mm}
   \item Power Allocation
   \vspace{3mm}
   \item Relay Selection 
   \vspace{3mm}
-  \item Interdependence of above
+  \item Interdependence of above two
   \vspace{3mm}
   \item Future Work
   \end{itemize}
@@ -120,7 +120,7 @@ Guide: Prof. Prasanna Chaporkar}
 
 
 
-\begin{frame}{Introduction}
+\begin{frame}<presentation:0>{Introduction}
   \begin{itemize}
   \item D2D and Relaying cooperative communications will play important roles in future generation wireless networks.
   \vspace{0.5cm}
@@ -158,7 +158,7 @@ The signals transmitted by source and relay are as follows:
 \vspace{-0.5cm}
 \end{frame}
 
-\begin{frame}{Partial Decode-and-Forward Relaying} {Received Signals}
+\begin{frame}<presentation:0>{Partial Decode-and-Forward Relaying} {Received Signals}
 \vspace{-1cm}
 Signals received at relay, BS during broadcast(b) and multicast(m) phases:
 \begin{equation*}
@@ -183,11 +183,13 @@ The above expression is true only if $\mathcal{D}$ has knowledge about the phase
 \begin{frame}{Amplify-and-Forward} {Received Signals}
 \vspace{-1cm}
 Signals received at relay, BS during the two slots: \\
+	\vspace{1cm}
 	\textit{First Slot:}
 	\begin{align*} 
 			Y_{sd} &= \sqrt{P_s G_{sd}} X_s + n_{sd} \\
 			Y_{sr} &= \sqrt{P_s G_{sr}} X_s + n_{sr} \\
 	\end{align*}
+	\pause
 	\textit{Second Slot:}
 	\begin{equation*}\label{yrd}
 			Y_{rd} = \sqrt{P_r G_{rd}} X_{rd} + n_{rd} 
@@ -247,9 +249,9 @@ where
 	
 \end{frame}
 
-\begin{frame}{Relay Selection}{Optimal Scheme}
+\begin{frame}{Relay Selection}{Ideal Scheme}
 	\vspace{-1cm}
-	An optimal scheme should use SNR as the deciding parameter \\
+	An ideal scheme should use SNR as the deciding parameter \\
 	In our case \\
 Select relay $k$
 where 
@@ -262,8 +264,9 @@ where
 
 \begin{frame}{Interdependence}
 	\vspace{-1cm}
-	Power allocation and relay selection mutually dependent
+	Power allocation and relay selection are mutually dependent \\
 	\vspace{1cm}
+	\pause
 	Can different relays be optimal at different
 	source powers?
 \end{frame}
@@ -292,27 +295,30 @@ let us find the power at which both relays are equally good.
 			P_0 = (1+b_1)(1+b_2) \frac{\frac{a_1b_1}{1+b_1} - 
 				\frac{a_2b_2}{1+b_2}}{a_1a_2(b_2-b_1)}
 	\end{equation*}
+	\pause
+	For $P_0 < 0$, one of the relays is the desired one irrespective of source power.
+\\
+	\pause
+	If $P_0 > 0$, then one of the relays gives more SNR at source
+	powers $< P_0$ and the other relay at powers $ > P_0$ \\
+
 \end{frame}
 \begin{frame}
-	For $P_0$ to be positive, both numerator and denominator should 
-	have same sign i.e., if 
-	$\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ then $b_2 > b_1$.
-	To explain this intuitively, let us assume $b_1,b_2$ to be 
-	much larger than 1 which reduces the first inequality to
-	$a_1 > a_2$. What this means is, source to relay channel is 
+		Let us consider one of the cases in which $P_0 > 0$ \\
+	\begin{center}
+	$\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ and $b_2 > b_1$
+	\end{center}
+	Assume $b_1,b_2 >> 1$ \\
+	First inequality: $a_1 > a_2$. \\ 
+	What do these conditions mean?
+	Source to relay channel is 
 	better for $R_1$ but relay to destination channel is stronger
 	for $R_2$. Hence at low source powers $R_1$ gives
 	better SNR but for  source power greater than  $P_0$, $R_2$ 
-	is a better relay than $R_1$. Same argument can be made 
-	for the case where inequalities are in the opposite
-	direction. 
+	is a better relay than $R_1$. 
 	\\
 \end{frame}
 \begin{frame}
-	For $P_0 < 0$, one of the relays is the desired one irrespective of source power.
-\end{frame}
-\begin{frame}
-	To summarise, here are the conditions under which one relay is better than the other:
 	\begin{itemize}
 		\item $\frac{a_1b_1}{1+b_1} >	\frac{a_2b_2}{1+b_2}$ and $b_2 > b_1$ \\
 			$R_1$ at source power less than  $P_0$ and $R_2$ at power greater than $P_0$
@@ -325,16 +331,15 @@ let us find the power at which both relays are equally good.
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{Power Allocation}
 	\vspace{1cm}
 	\begin{itemize}  
 		\item
 			Assume an initial source power
-			\vspace{1cm}
 		\item Select the best relay at this power
 		\item Solve the optimisation problem
 		\item Check if the current relay is still the best
-		\item If not use the other relay
+		\item If not, use the other relay
 	\end{itemize}
 \end{frame}
 
@@ -343,19 +348,16 @@ let us find the power at which both relays are equally good.
 	\vspace{1cm}
 	\begin{itemize}  
 		\item
-			Will the above method work?
+			Will the above method work? \\
+			Remains to be seen if the above solution converges
+			\vspace{1cm}
+			\pause
+	
+		\item Power allocation at relay
 			\vspace{1cm}
 			\pause
 		\item Extend it to the case where there are more than two relays
-			\pause
-		\item Power allocation at relay
 	\end{itemize}
-\end{frame}
-
-
-\begin{frame}{}
-	\centering
-	\textbf{Thank You}
 \end{frame}
 
 \end{document}
