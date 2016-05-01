@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.2.25)  29 APR 2016 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.2.25)  1 MAY 2016 11:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -769,14 +769,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\new@ifnextchar' on input line 66.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 66.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 66.
-
 (./presentation.aux)
 \openout1 = `presentation.aux'.
 
@@ -1002,7 +994,7 @@ thkerncmss.
 File: figures/pdfRelaying.png Graphic file (type png)
 
 <use figures/pdfRelaying.png>
-Package pdftex.def Info: figures/pdfRelaying.png used on input line 144.
+Package pdftex.def Info: figures/pdfRelaying.png used on input line 146.
 (pdftex.def)             Requested size: 307.28987pt x 81.05794pt.
  [4
 
@@ -1013,13 +1005,66 @@ Package pdftex.def Info: figures/pdfRelaying.png used on input line 144.
 ] [7
 
 ]
-[8
+Package epstopdf Info: Source file: <../img/sysmodel.eps>
+(epstopdf)                    date: 2016-04-11 12:47:29
+(epstopdf)                    size: 526877 bytes
+(epstopdf)             Output file: <../img/sysmodel-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-04-11 13:44:38
+(epstopdf)                    size: 44675 bytes
+(epstopdf)             Command: <repstopdf --outfile=../img/sysmodel-eps-conver
+ted-to.pdf ../img/sysmodel.eps>
+(epstopdf)             \includegraphics on input line 181.
+Package epstopdf Info: Output file is already uptodate.
 
-] [9
+<../img/sysmodel-eps-converted-to.pdf, id=204, 555.07375pt x 444.66125pt>
+File: ../img/sysmodel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../img/sysmodel-eps-converted-to.pdf>
+Package pdftex.def Info: ../img/sysmodel-eps-converted-to.pdf used on input lin
+e 181.
+(pdftex.def)             Requested size: 180.67499pt x 144.73709pt.
+ [8
+
+ <../img/sysmodel-eps-converted-to.pdf>] [9
 
 ] [10
 
 ] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
+
+]
+[23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
 
 ]
 \tf@nav=\write6
@@ -1031,11 +1076,11 @@ Package pdftex.def Info: figures/pdfRelaying.png used on input line 144.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1043,31 +1088,33 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
  ) 
 Here is how much of TeX's memory you used:
- 17719 strings out of 495025
- 336597 string characters out of 6181515
- 405138 words of memory out of 5000000
- 20505 multiletter control sequences out of 15000+600000
+ 17786 strings out of 495025
+ 337302 string characters out of 6181515
+ 405017 words of memory out of 5000000
+ 20535 multiletter control sequences out of 15000+600000
  12691 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,14n,55p,440b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,55p,440b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msam10.pfb>
-Output written on presentation.pdf (11 pages, 148665 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
+10.pfb>
+Output written on presentation.pdf (28 pages, 235347 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
- 24 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 812 PDF objects out of 1000 (max. 8388607)
+ 745 compressed objects within 8 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
